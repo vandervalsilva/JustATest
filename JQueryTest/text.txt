@@ -1,0 +1,2 @@
+This is a text file create to test Ajax for JQuery.
+Deval Testing..

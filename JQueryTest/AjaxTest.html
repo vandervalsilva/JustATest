@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<style type="text/css">
+div {<!--from  w w  w.  j a  v a 2s  . c  o  m-->
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+}
+</style>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+  $.get('text.txt', function(data) {
+    alert(data);
+	});
+
+  $(function() {
+    $(document).click(function(event) {
+    	alert("Deval testing...");
+      $("div#box").animate({
+        left : '+=100px'
+      }, 200);
+    });
+  });
+
+</script>
+</head>
+<body>
+  <div id="box"></div>
+  <input  ng-model="name" type="text"  placeholder="Your name">
+     <h1>Hello  {{  name  }}</h1>
+</body>
+</html>
